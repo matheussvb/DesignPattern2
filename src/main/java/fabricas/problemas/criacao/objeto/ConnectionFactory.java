@@ -7,11 +7,12 @@ import java.sql.SQLException;
 public class ConnectionFactory {
     public Connection getConnection() {
         try {
+            Connection connection;
             if(System.getenv("tipoBanco").equals("mysql")){
-                Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root",
+                connection = DriverManager.getConnection("jdbc:mysql://localhost/banco", "root",
                         "senha");
             } else {
-                Connection connection = DriverManager.getConnection("jdbc:postgres://localhost/banco", "root",
+                connection = DriverManager.getConnection("jdbc:postgres://localhost/banco", "root",
                         "senha");
             }
 
