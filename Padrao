@@ -1,0 +1,6 @@
+1) Diferença entre factory e builder
+
+2) Flyweight
+Não precisa instanciar varios objetos parecidos, pois usa o mesmo em todo o projeto com o map.
+
+3)
