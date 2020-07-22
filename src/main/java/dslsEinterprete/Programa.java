@@ -1,5 +1,7 @@
 package dslsEinterprete;
 
+import visitor.ImpressoraVisitor;
+
 public class Programa {
     public static void main(String[] args) {
 
@@ -12,6 +14,9 @@ public class Programa {
         int resultado = soma.avalia();
 
         System.out.println(resultado);
+
+        ImpressoraVisitor impressora = new ImpressoraVisitor();
+        soma.aceita(impressora);
 
     }
 }

@@ -1,5 +1,7 @@
 package dslsEinterprete;
 
+import visitor.ImpressoraVisitor;
+
 public class Subtracao implements Expressao {
     private final Expressao esquerda;
     private final Expressao direita;
@@ -14,5 +16,18 @@ public class Subtracao implements Expressao {
         int valorEsquerda = esquerda.avalia();
         int valorDireita = direita.avalia();
         return valorEsquerda - valorDireita;
+    }
+
+    @Override
+    public void aceita(ImpressoraVisitor impressora) {
+        impressora.visitaSubtracao(this);
+    }
+
+    public Expressao getEsquerda() {
+        return esquerda;
+    }
+
+    public Expressao getDireita() {
+        return direita;
     }
 }

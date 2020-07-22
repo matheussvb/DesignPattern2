@@ -17,4 +17,4 @@ O padrão Interpreter é geralmente útil para interpretar DSLs (se você não s
 É realmente um padrão de projeto bem peculiar, e com utilização bem específica.
 
 5) Estruturas de dados e o Visitor
-
+visitor é quase igual ao interprete, porém guarda informações da consulta
