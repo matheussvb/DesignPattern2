@@ -8,6 +8,7 @@ public class NotasMusicais {
             new HashMap<String, Nota>();
     static {
         notas.put("do", new Do());
+        notas.put("do sustenido", new DoSustenido());
         notas.put("re", new Re());
         notas.put("mi", new Mi());
         notas.put("fa", new Fa());
