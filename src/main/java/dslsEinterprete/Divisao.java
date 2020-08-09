@@ -1,11 +1,17 @@
 package dslsEinterprete;
 
 import visitor.ImpressoraVisitor;
+import visitor.Visitor;
 
 public class Divisao implements Expressao {
 
     private Expressao esquerda;
     private Expressao direita;
+
+    public Divisao(Expressao esquerda, Expressao direita) {
+        this.esquerda = esquerda;
+        this.direita = direita;
+    }
 
     public Expressao getEsquerda() {
         return esquerda;
@@ -13,11 +19,6 @@ public class Divisao implements Expressao {
 
     public Expressao getDireita() {
         return direita;
-    }
-
-    public Divisao(Expressao esquerda, Expressao direita) {
-        this.esquerda = esquerda;
-        this.direita = direita;
     }
 
     @Override
@@ -28,6 +29,10 @@ public class Divisao implements Expressao {
     }
 
     @Override
+    public void aceita(Visitor impressora) {
+
+    }
+
     public void aceita(ImpressoraVisitor impressora) {
         impressora.visitaDivisao(this);
     }

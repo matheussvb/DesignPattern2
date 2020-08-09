@@ -1,6 +1,7 @@
 package dslsEinterprete;
 
 import visitor.ImpressoraVisitor;
+import visitor.Visitor;
 
 public class Multiplicacao implements Expressao {
 
@@ -28,6 +29,10 @@ public class Multiplicacao implements Expressao {
     }
 
     @Override
+    public void aceita(Visitor impressora) {
+
+    }
+
     public void aceita(ImpressoraVisitor impressora) {
         impressora.visitaMultiplicacao(this);
     }

@@ -1,6 +1,7 @@
 package dslsEinterprete;
 
 import visitor.ImpressoraVisitor;
+import visitor.Visitor;
 
 public class Soma implements Expressao {
 
@@ -21,6 +22,10 @@ public class Soma implements Expressao {
     }
 
     @Override
+    public void aceita(Visitor impressora) {
+
+    }
+
     public void aceita(ImpressoraVisitor impressora) {
         impressora.visitaSoma(this);
     }

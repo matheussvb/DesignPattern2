@@ -1,6 +1,7 @@
 package dslsEinterprete;
 
 import visitor.ImpressoraVisitor;
+import visitor.Visitor;
 
 public class Subtracao implements Expressao {
     private final Expressao esquerda;
@@ -19,6 +20,10 @@ public class Subtracao implements Expressao {
     }
 
     @Override
+    public void aceita(Visitor impressora) {
+
+    }
+
     public void aceita(ImpressoraVisitor impressora) {
         impressora.visitaSubtracao(this);
     }

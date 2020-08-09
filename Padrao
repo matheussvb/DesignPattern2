@@ -18,3 +18,15 @@ O padrão Interpreter é geralmente útil para interpretar DSLs (se você não s
 
 5) Estruturas de dados e o Visitor
 visitor é quase igual ao interprete, porém guarda informações da consulta
+
+6) Bridges e Adapters
+Bridges - Esconde o código e não fala como chegou nele
+
+
+7) Command - sistema de controle de pedidos, client, valor e status
+Guarda o comando para executar no futuro
+
+8) Facade & singletons
+Facade = interface unica para todos chegarem no seu sistema, usando 1 só / coisa unica
+Singleton = Quanto temos uma unica classe que precisamos "tomar conta" / unica instancia dentro do sistema
+ruim de implementar
